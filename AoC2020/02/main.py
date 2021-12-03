@@ -24,6 +24,7 @@ def part2(passwords):
     for line in passwords:
         results = re.search(
             r'(?P<pos1>\d*)-(?P<pos2>\d*) (?P<letter>[a-zA-Z]): (?P<password>\w*)', line)
+        print(results)
         pos1 = int(results['pos1'])
         pos2 = int(results['pos2'])
         letter = results['letter']
