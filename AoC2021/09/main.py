@@ -1,6 +1,3 @@
-from math import sin
-import numpy as np
-
 with open('input.txt') as f:
     caves = [[int(digit) for digit in row.strip()] for row in f]
 
