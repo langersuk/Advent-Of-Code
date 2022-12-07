@@ -1,8 +1,12 @@
 with open('input.txt') as f:
-    nums = [x.strip() for x in f]
+    nums = [[list(range(int(y.split("-")[0]), int(y.split("-")[1])+1)) for y in x.strip().split(",")] for x in f]
 
 def part1(nums):
     total = 0
+    for num in nums:
+        print(set(num[0]).intersection(set(num[1])))
+        if len(set(num[0]).intersection(set(num[1]))) == len(num[0]) or len(num[1]):
+            total += 1
     return total
 
 def part2(nums):
